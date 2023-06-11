@@ -1,0 +1,95 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "Name": "samsung11",
+      "Quantity": 2,
+      "Price": 2000,
+      "Img": "assets/download.jpg",
+      "CateogryID": 1,
+      "Detials": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, accusamus nihil veniam reiciendis aut ea cupiditate soluta, consequuntur eum error fugit facere accusantium aperiam quis ratione nulla impedit necessitatibus distinctio!",
+      "IsPurchased": false
+    },
+    {
+      "id": 2,
+      "Name": "samsung2",
+      "Quantity": 3,
+      "Price": 4000,
+      "Img": "assets/download.jpg",
+      "CateogryID": 2,
+      "Details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, accusamus nihil veniam reiciendis aut ea cupiditate soluta, consequuntur eum error fugit facere accusantium aperiam quis ratione nulla impedit necessitatibus distinctio!",
+      "IsPurchased": false
+    },
+    {
+      "id": 3,
+      "Name": "samsung3",
+      "Quantity": 4,
+      "Price": 6000,
+      "Img": "assets/download.jpg",
+      "CateogryID": 2,
+      "Detials": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, accusamus nihil veniam reiciendis aut ea cupiditate soluta, consequuntur eum error fugit facere accusantium aperiam quis ratione nulla impedit necessitatibus distinctio!",
+      "IsPurchased": false
+    },
+    {
+      "id": 30,
+      "Name": "oppo a5",
+      "Price": 2000,
+      "Quantity": 3,
+      "CateogryID": 2,
+      "Img": "assets/download.jpg",
+      "Details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, accusamus nihil veniam reiciendis aut ea cupiditate soluta, consequuntur eum error fugit facere accusantium aperiam quis ratione nulla impedit necessitatibus distinctio!",
+      "IsPurchased": false
+    },
+    {
+      "id": 4,
+      "Name": "oppo a20",
+      "Price": 5000,
+      "Quantity": 5,
+      "CateogryID": 1,
+      "Img": "assets/download.jpg",
+      "IsPurchased": false,
+      "Details": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, accusamus nihil veniam reiciendis aut ea cupiditate soluta, consequuntur eum error fugit facere accusantium aperiam quis ratione nulla impedit necessitatibus distinctio!"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Ahmed ali",
+      "email": "ahali@gmail.com",
+      "mobileNumber": "12345678910",
+      "password": "123456",
+      "confirmPassword": "123456"
+    },
+    {
+      "fullName": "jjjjjjjj",
+      "email": "somayamohamed8632@gmail.com",
+      "mobileNumber": [
+        ""
+      ],
+      "address": {
+        "city": "dd",
+        "postalCode": "",
+        "street": "ddd"
+      },
+      "password": "1234568",
+      "confirmPassword": "",
+      "id": 2
+    },
+    {
+      "fullName": "somaya",
+      "email": "somayamohamed863@gmail.com",
+      "mobileNumber": [
+        "01224452100",
+        "01224452101"
+      ],
+      "address": {
+        "city": "qina",
+        "postalCode": "2",
+        "street": "qena"
+      },
+      "password": "123456",
+      "confirmPassword": "",
+      "id": 3
+    }
+  ]
+}

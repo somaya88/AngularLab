@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <form class="form-control" [formGroup]="userForm" (ngSubmit)="addUser()">
+            <div class="input-group mb-3">
+ 
+                <input formControlName="fullName" type="text" name="fullName" class="form-control" placeholder="fullName" aria-label="fullName" aria-describedby="basic-addon1"
+                [ngClass]="{'is-invalid':(fullName?.touched||fullName?.dirty) && fullName?.invalid}"
+                >
+
+                <span class="invalid-feedback">
+                  <span *ngIf="fullName?.errors?.['required']">Please enter fullName</span>
+                  <span *ngIf="fullName?.errors?.['pattern']">fullName is at least 5 characters</span>
+    
+                </span>
+              </div>
+              <div class="input-group mb-3">
+      
+                <input formControlName="email" type="text" class="form-control" name="email" placeholder="email" aria-label="email" aria-describedby="basic-addon1"
+                [ngClass]="{'is-invalid':(email?.touched||email?.dirty) && email?.invalid}"
+                >
+
+                <span class="invalid-feedback">
+                  <span *ngIf="email?.errors?.['required']">Please enter your email</span>
+                </span>
+              </div>
+              <div class="input-group mb-3">
+        
+                <input formControlName="password" type="text" class="form-control" name="password" placeholder="password" aria-label="password" aria-describedby="basic-addon1"
+                [ngClass]="{'is-invalid':(password?.touched||password?.dirty) && password?.invalid}"
+                >
+                <span class="invalid-feedback">
+                  <span *ngIf="password?.errors?.['required']">Please enter your password</span>
+    
+                </span>
+              </div>
+              Address:
+              <div formArrayName="address">
+                
+        
+                    <!-- {{i}} -->
+                    city name :
+                    <input type="text" formControlName="city">
+                    postal code:
+                    <input type="text" formControlName="postalcode">
+                    street:
+                    <input type="text" formControlName="street">
+              </div>
+
+              <div formArrayName="mobileNumber">
+                <div *ngFor="let add of mobileNumber.controls;let i=index">
+                  <div [formGroupName]="i">
+        
+                    mobile:
+                    <input type="text" formControlName="mobile">
+        
+                    <button class="btn btn-danger " (click)="removeMobileNumber(i)">Remove</button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" (click)="addMobileNumber()">Add mobile</button>
+              
+              <button (click)="addUser()" class="btn btn-primary text-right">signUp</button>
+
+            </form>
+    </div>
+</div>
+
+  
+  <h2>{{userForm.value | json}}</h2>

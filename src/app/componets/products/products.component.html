@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <!-- day3 -->
+    <div class="container" >
+        <div class="row">
+            <div *ngFor="let item of filteredProducts" class="col">
+     
+          <img [src]="item.Img" class="img-fluid" >
+          <h4>{{item.Name}}</h4>
+          <h5>{{item.Price }}</h5>
+        
+    </div>
+</div>
+    </div>
+        
+        <div class="row">
+    <div class="col">
+        <select  class="form-select" name="cat" [(ngModel)]="selectcat">
+            <option *ngFor="let cat of category" [value]="cat.ID" >{{cat.Name}}</option>
+          </select>
+    </div>
+    <div>
+        test:
+        {{selectcat}}
+        
+    </div>
+
+<!-- <div class="col">
+<img *ngIf="imageShow" [src]="storedata.logo" alt="">
+<h1>{{storedata.name}}</h1>
+<p>branches</p>
+<ul>
+    <li *ngFor="let i of storedata.branches">
+        {{i}}</li>
+</ul>
+<div *ngIf="isPurchased">Thanks for purchasing from our Store {{ClientName}}</div>
+<button class="btn btn-secondary" (click)="imagesh()" (click)="toggleDiv()" >buy</button>
+</div> -->
+
+<div class="col" *ngFor="let p of filteredProducts" [class.d-none]="selectcat!=p.CateogryID" [ngStyle]="{'background-color': p.Quantity === 1 ? 'yellow' : 'white'}">
+  
+    <img appHover [src]="p.Img" alt="" hover="5px 5px 10px blue" >
+<h5>{{p.Name}}</h5>
+
+<p>price:{{p.Price| currency:'USD':'symbol':'1.2-2'}}</p>
+<p>CateogryID:{{p.CateogryID}}</p>
+<button (click)="decProduct(p)" class="btn btn-secondary" >-</button>
+<p>quantity:{{p.Quantity}}</p>
+<button (click)="addProduct(p)" class="btn btn-secondary" >+</button>
+<p>{{getStatus(p.Quantity) }}</p>
+<p>Purchase Date: {{ todayDate  }}</p>
+<button class="btn btn-secondary" [disabled]="p.Quantity == 0" (click)="buyProduct(p)">buy</button>
+<button (click)="cart(p)" class="btn btn-primary" [disabled]="!p.Quantity">cart:{{p.IsPurchased && p.Quantity?'Remove From Cart':'Add To Cart'}} </button>
+<button (click)="prdDetails(p.id)">Details</button>
+</div>
+</div>
+</div>
+
+
+<p>Credit Card Number: {{ creditCardNumber | creditCard }}</p>

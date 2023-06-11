@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button class="btn btn-primary" (click)="loginFunc()" [disabled]="user">Login</button>
+             <button class="btn btn-danger" (click)="logoutFunc()" [disabled]="!user">LogOut</button>
+            
+        </div>
+        <div #local></div>
+    </div>
+</div>

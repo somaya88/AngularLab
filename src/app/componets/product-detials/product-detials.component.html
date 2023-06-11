@@ -1,0 +1,18 @@
+<h1>product Details</h1>
+    <div  [ngStyle]="{'background-color': product?.Quantity === 1 ? 'yellow' : 'white'}">
+  
+        <img appHover [src]="product?.Img" alt="" hover="5px 5px 10px blue" >
+    <h5>{{product?.Name}}</h5>
+    
+    <p>price:{{product?.Price| currency:'USD':'symbol':'1.2-2'}}</p>
+    <p>CateogryID:{{product?.CateogryID}}</p>
+    <p>quantity:{{product?.Quantity}}</p>
+    <p>details:{{product?.Details}}</p>
+    <p>Purchase Date: {{ todayDate  }}</p>
+   </div>
+    <!-- Day7 -->
+  <div class="d-flex justify-content-center" role="group" aria-label="Basic example">
+    <button class="border-0" (click)="previousFunc()" ><</button>
+    <button class="border-0" (click)="nextFunc()" >></button>
+  </div>
+   <button class="button-91" (click)="backToProducts()">Back</button>
